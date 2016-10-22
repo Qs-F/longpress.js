@@ -71,13 +71,12 @@ button.pressed::before {
 </head>
 <body>
   <button id="b1"><span>HELLO!</span></button>
+  <button class="button">Hello</button>
 
   <script>
 document.addEventListener("DOMContentLoaded", function() {
-  var l = new LongPress
-    l.SetCallback(function(){console.log("me!")})
-    l.SetInterval(1000)
-    l.SetElement(document.getElementById("b1"))
+  new LongPress(document.getElementById("b1"), 1000, function(){})
+  new LongPress(document.getElementsByClassName("button")[0], 1000, function(){})
 }, false)
   </script>
 

@@ -1,9 +1,12 @@
 'use strict';
 
 class LongPress {
-  constructor() {
-    this.interval = 1000
-    this.callback = function(){}
+  constructor(element, interval, callback) {
+    this.SetCallback(callback)
+    if(element != undefined && interval != undefined) {
+      this.SetInterval(interval)
+      this.SetElement(element)
+    }
   }
   SetInterval(s) {
     this.interval = s
