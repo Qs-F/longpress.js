@@ -13,12 +13,12 @@ body {
 }
 button {
   letter-spacing: .1em;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   outline: none;
-  border: rgb(0, 185, 82) solid 3px;
-  color: rgb(0, 185, 82);
+  border: rgb(100, 100, 100) solid 3px;
+  color: rgb(100, 100, 100);
   background-color: rgba(0, 0, 0, 0);
   overflow: hidden;
   position: relative;
@@ -26,12 +26,14 @@ button {
   font-size: 16px;
   text-align: center;
   font-weight: bold;
+    width: 100%;
+    height: 300px;
 }
 button.pressing {
   color: rgb(240, 240, 240);
 }
 button.pressed {
-  background-color: rgb(0, 185, 82);
+  background-color: rgb(100, 100, 100);
   color: rgb(245, 245, 245);
 }
 button::before {
@@ -46,8 +48,8 @@ button::before {
   left: -100%;
   top: 0;
   z-index: -1;
-  transition: .12s;
-  background-color: rgb(0, 185, 82);
+  transition: .22s;
+  background-color: rgb(100, 100, 100);
 }
 button.pressing::before {
   width: 100%;
@@ -55,8 +57,13 @@ button.pressing::before {
   top: 0;
   left: 0;
   transition: 1s;
-  transition-timing-function: cubic-bezier(.8, 0, 1, 0);
-  background-color: rgb(0, 185, 82);
+  transition-timing-function: cubic-bezier(.6, 0, 1, 0);
+  background-color: rgb(100, 100, 100);
+}
+button.pressed::before {
+  transition: .22s;
+  top: 0;
+  left: 0;
 }
   </style>
 <script src="/longpress.js"></script>
