@@ -1,0 +1,22 @@
+{
+  "name": "longpress.js",
+  "version": "0.0.1",
+  "description": "This package provide useful tool for long press function. (Support: after ES5, both of touch device and mouse device)",
+  "main": "longpress.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qs-F/longpress.js.git"
+  },
+  "keywords": [
+    "longpress"
+  ],
+  "author": "Qs-F",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Qs-F/longpress.js/issues"
+  },
+  "homepage": "https://github.com/Qs-F/longpress.js#readme"
+}
