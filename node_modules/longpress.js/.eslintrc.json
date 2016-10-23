@@ -1,0 +1,17 @@
+{
+  "extends": ["eslint:recommended"],
+  "no-unused-vars": ["error", { "classes": false }],
+  "plugins": [],
+  "parserOptions": {},
+  "ecmaFeatures": {
+    "blockBindings": true,
+    "modules": true,
+    "superInFunctions": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "globals": {},
+  "rules": {}
+}

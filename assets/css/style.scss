@@ -1,0 +1,27 @@
+
+$key: rgb(64, 184, 244);
+$white: rgb(245, 245, 245);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $white;
+  font-family: "Montserrat", sans-serif;
+  header {
+    width: 100vw;
+    position: fixed;
+    text-align: center;
+    background-color: $key;
+    height: 64px;
+    padding: 16px 0;
+    h1 {
+      font-size: 32px;
+      line-height: 1em;
+      color: $white;
+    }
+  }
+}

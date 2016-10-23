@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: whitesmoke;
+  font-family: "Montserrat", sans-serif; }
+  body header {
+    width: 100vw;
+    position: fixed;
+    text-align: center;
+    background-color: #40b8f4;
+    height: 64px;
+    padding: 16px 0; }
+    body header h1 {
+      font-size: 32px;
+      line-height: 1em;
+      color: whitesmoke; }
+
+/*# sourceMappingURL=style.css.map */
