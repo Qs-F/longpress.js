@@ -2,4 +2,4 @@
 
 This package provides long press utility for frontend development.
 
-## Instlation
+See [HERE](https://qs-f.github.com/longpress.js)
