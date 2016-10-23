@@ -26,12 +26,14 @@ class LongPress {
   }
   startTimer(e) {
     (function() {
+      this.preventSelect()
       this.elem.classList.remove("pressed")
       this.elem.classList.add("pressing")
       this.timer = window.setTimeout(function(){
         this.callback()
         this.elem.classList.add("pressed")
         this.elem.classList.remove("pressing")
+        this.allowSelect()
       }.bind(this), this.interval)
     }.bind(this))()
     e.preventDefault()
@@ -39,9 +41,26 @@ class LongPress {
   clearTimer() {
     if(this.timer != undefined) {
       this.elem.classList.remove("pressing")
+      this.allowSelect()
       window.clearTimeout((function() {
         return this.timer
       }.bind(this))())
     }
+  }
+  preventSelect() {
+    this.elem.style.webkitTouchCallout = "none";
+    this.elem.style.webkitUserSelect = "none";
+    this.elem.style.MozTouchCallout = "none";
+    this.elem.style.MozUserSelect = "none";
+    this.elem.style.touchCallout = "none";
+    this.elem.style.userSelect = "none";
+  }
+  allowSelect() {
+    this.elem.style.webkitTouchCallout = "auto";
+    this.elem.style.webkitUserSelect = "auto";
+    this.elem.style.MozTouchCallout = "auto";
+    this.elem.style.MozUserSelect = "auto";
+    this.elem.style.touchCallout = "auto";
+    this.elem.style.userSelect = "auto";
   }
 }

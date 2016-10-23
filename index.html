@@ -2,14 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
   <title>longpress.js · GitHub Pages</title>
 </head>
 <body>
   <header>
     <h1>longpress.js</h1>
+    <p>Press Here For a second!</p>
   </header>
-  <script src="assets/js/script.js"></script>
+  <article>
+    <section>
+      <h2>Installation</h2>
+      <pre contenteditable>npm install https://github.com/Qs-F/longpress.js.git</pre>
+    </section>
+    <section>
+      <h2>Demo</h2>
+      <button><span>Hello</span></button>
+      <pre contenteditable>new LongPress(document.getElementsByTagName("button")[0], 1000, function(){})</pre>
+      <button><span>alert me!</span></button>
+<pre contenteditable>new LongPress(document.getElementsByTagName("button")[1], 1000, function(){alert("you gain long press!")})</pre>
+      <p>Or, please tap header once.</p>
+    </section>
+    <section>
+      <h2>Usage</h2>
+      <h3>One line code</h3>
+      <pre>new LongPress(ELEMENT, INTERVAL, CALLBACK_FUNCTION)</pre>
+      <h3>General code</h3>
+      <pre>var l = new LongPress
+l.SetElement(ELEMENT)
+l.SetInterval(INTERVAL)
+l.SetCallback(CALLBACK_FUNCTION)</pre>
+    </section>
+  </article>
+  <script src="node_modules/longpress.js/longpress.js"></script>
+  <script>
+new LongPress(document.getElementsByTagName("header")[0], 1000, function(){})
+new LongPress(document.getElementsByTagName("button")[0], 1000, function(){})
+new LongPress(document.getElementsByTagName("button")[1], 1000, function(){alert("you gain long press!")})
+  </script>
 </body>
 </html>
